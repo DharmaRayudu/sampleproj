@@ -1,0 +1,14 @@
+<div class="form-group">
+  <h3>Add User</h3>
+  <label>User Name: </label>
+  <!--Access input field using reference(templateReference)-->
+  <!--<input type="text" class="form-control" [(ngModel)]="userName" />-->
+  <input type="text" class="form-control" #inputUserName />
+  <!--if we pass reference variable to particular method only that method 
+  is going to use, if we want to pass accross different functions then we have to use 
+  @ViewChild
+  -->
+  <div class="mt-2">
+    <button class="btn btn-primary" (click)="addUser()">Add User</button>
+  </div>
+</div>

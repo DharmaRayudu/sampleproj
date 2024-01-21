@@ -1,0 +1,32 @@
+<!--
+  Here userData is from child component emiter
+  That will be emitting value as event 
+  addUser is the method in parent component
+-->
+<app-add-user (userData)="addUser($event)"></app-add-user>
+
+<div class="mt-3">
+  <h3>User List</h3>
+  <app-user [userList]="users">
+    <div>This is from DIV</div>
+  </app-user>
+</div>
+
+<div custome-directive>Please add Background color RED.</div>
+<div appCustomedirectivestyle>Please add Background color Green.</div>
+
+<div *ngIf="isAvailable">Show the text if available true;</div>
+
+<ng-template [ngIf]="isAvailable">
+  Show the text if available true;
+</ng-template>
+
+<div *appIfCustomDirective>Custome Structural Directive Test;</div>
+
+<div [ngSwitch]="value">
+  <div *ngSwitchCase="10">Value 10</div>
+  <div *ngSwitchCase="20">Value 20</div>
+  <div *ngSwitchCase="30">Value 30</div>
+  <div *ngSwitchCase="40">Value 40</div>
+  <div *ngSwitchDefault="">Default Value</div>
+</div>
